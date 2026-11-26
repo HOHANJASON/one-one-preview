@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="1-1 貸款方案與申請流程的展示版。">
+  <title>1-1｜貸款方案展示</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./motion.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <div class="frame top-inner">
+      <a class="brand" href="#top"><strong>1-1</strong><span>貸款方案</span></a>
+      <nav aria-label="主要導覽">
+        <a href="#plans">方案</a><a href="#example">月付試算</a><a href="#flow">申請流程</a>
+      </nav>
+      <a class="button small" href="#flow" data-preview>操作預覽</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero frame" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="overline">小額週轉　／　負債整合　／　信用貸款</p>
+        <h1 id="hero-title">從資金需求開始，<br>找到合適的方向。</h1>
+        <p class="lede">三種方案一次看懂。先比較，再預覽怎麼申請。</p>
+        <div class="actions">
+          <a class="button" href="#plans">比較方案</a>
+          <a class="button outline" href="#flow" data-preview>看申請畫面</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="./assets/finance-hero.webp" alt="兩人在家中一起核對預算" fetchpriority="high">
+      </div>
+    </section>
+
+    <section class="frame section" id="plans" aria-labelledby="plan-title">
+      <header class="section-title" data-reveal>
+        <h2 id="plan-title">選一種資金用途</h2>
+        <p>先從你的情況看起。</p>
+      </header>
+      <div class="plans">
+        <article class="plan" data-reveal>
+          <img src="./assets/finance-cash.webp" alt="" loading="lazy">
+          <div><h3>小額週轉</h3><p>臨時支出、短期收支缺口。</p><a href="#flow" data-preview="小額週轉">預覽這個方案</a></div>
+        </article>
+        <article class="plan" data-reveal>
+          <img src="./assets/finance-consolidation.webp" alt="" loading="lazy">
+          <div><h3>負債整合</h3><p>多筆借款，集中比較月付與費用。</p><a href="#flow" data-preview="負債整合">預覽這個方案</a></div>
+        </article>
+        <article class="plan" data-reveal>
+          <img src="./assets/finance-credit.webp" alt="" loading="lazy">
+          <div><h3>信用貸款</h3><p>進修、居家修繕等已規劃支出。</p><a href="#flow" data-preview="信用貸款">預覽這個方案</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="frame section" id="example" aria-labelledby="example-title">
+      <div class="example" data-reveal>
+        <div class="example-visual">
+          <img src="./assets/finance-case.webp" alt="" loading="lazy">
+          <div class="example-big">
+            <h2 id="example-title">負債整合案例</h2>
+            <p class="sample-label">示意試算</p>
+            <div class="metric"><span>月付約少</span><strong aria-hidden="true"><span id="percent">48</span><small>%</small></strong><span class="sr-only">48%</span></div>
+          </div>
+        </div>
+        <div class="compare">
+          <div><span>整合前月付</span><strong>NT$ 52,000</strong><progress max="52000" value="52000" aria-label="整合前月付 52,000 元"></progress></div>
+          <div><span>整合後月付</span><strong>NT$ 27,000</strong><progress max="52000" value="27000" aria-label="整合後月付 27,000 元"></progress></div>
+          <p><span>每月差額</span> <b>NT$ 25,000</b></p>
+          <details><summary>試算前提</summary><p>以兩組假設月付比較。實際金額因利率、期數及費用而異，月付較低也可能伴隨更長的還款期限。</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="frame section" id="flow" aria-labelledby="flow-title">
+      <header class="section-title" data-reveal><h2 id="flow-title">申請怎麼走</h2><p>先看流程，再決定要不要開始。</p></header>
+      <div class="flow-panel" data-reveal>
+        <img src="./assets/finance-benefits.webp" alt="" loading="lazy">
+        <div>
+          <ol class="flow-list">
+            <li><strong>選擇方案</strong><span>確認用途與金額</span></li>
+            <li><strong>預覽資料</strong><span>核對資料與附件</span></li>
+            <li><strong>查詢進度</strong><span>以案件編號查詢</span></li>
+          </ol>
+          <a class="button" href="#faq" data-preview>試看申請畫面</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="frame section faq" id="faq" aria-labelledby="faq-title" data-reveal>
+      <h2 id="faq-title">常見問題</h2>
+      <details><summary>這個展示頁可以送件嗎？</summary><p>這裡可以試看畫面與流程。展示版不會送出申請，也不會收集個人資料。</p></details>
+      <details><summary>比較方案時要看什麼？</summary><p>一併看每月負擔、還款期數與總費用。</p></details>
+    </section>
+  </main>
+
+  <footer class="frame footer"><strong>1-1</strong><span>客戶展示版 · 申請流程與金額僅供示意</span><a href="#top">回到頂端</a></footer>
+
+  <dialog id="preview" aria-labelledby="preview-title">
+    <form method="dialog" class="dialog-close"><button aria-label="關閉預覽">×</button></form>
+    <p class="overline">操作預覽</p>
+    <h2 id="preview-title">申請流程</h2>
+    <div class="preview-content" aria-live="polite">
+      <section data-stage><h3>確認方案</h3><p>方案 <strong id="selected-plan">小額週轉</strong></p><p>示範金額 <strong>NT$ 100,000</strong></p></section>
+      <section data-stage hidden><h3>預覽申請資料</h3><p>示範資料已備妥。正式流程會在送件前讓你核對聯絡方式與附件。</p></section>
+      <section data-stage hidden><h3>查詢案件進度</h3><p>正式送件後，可在會員中心查到案件編號與審核更新。</p></section>
+    </div>
+    <div class="dialog-controls"><button class="button outline" id="previous-stage" type="button">上一步</button><button class="button" id="next-stage" type="button">下一步</button></div>
+  </dialog>
+</body>
+</html>
