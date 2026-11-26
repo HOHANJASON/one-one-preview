@@ -1,0 +1,18 @@
+[hidden] { display: none !important; }
+body.office-static { display: block; }
+.office-static [data-demo-content] { display: grid; grid-template-columns: 15rem minmax(0,1fr); min-height: 100vh; }
+.office-static .office-top button { background: #e4effd; color: #204d8a; }
+.office-static .office-top > div { display: flex; align-items: baseline; gap: .7rem; }
+.office-static .demo-note { margin: 0 0 1rem; }
+.office-static .demo-action-note { color: #56697d; font-size: .88rem; white-space: nowrap; }
+.office-static [data-demo-filter] fieldset { display: flex; flex-wrap: wrap; align-items: end; gap: .55rem; border: 0; padding: 0; margin: 0; min-width: 0; }
+.office-login-card .demo-puzzle-wrap { margin-top: .7rem; }
+.office-login-card .demo-reset { background: transparent; color: #204d8a; padding: .2rem; text-decoration: underline; }
+.demo-puzzle { --gap: 49.02%; --piece: 0%; position: relative; overflow: hidden; aspect-ratio: 480 / 205; border-radius: .3rem;
+  background: #dce9f5 url('../assets/finance-case.webp') center / cover; }
+.demo-puzzle span,.demo-puzzle i { position: absolute; top: 28%; width: 14%; aspect-ratio: 1; border: 2px solid #f2f7ff; border-radius: .25rem; }
+.demo-puzzle span { left: var(--gap); background: #1427438a; }
+.demo-puzzle i { left: var(--piece); background: #aaccf0; box-shadow: 0 0 3px #122942; }
+@media (max-width: 810px) {
+  .office-static [data-demo-content] { grid-template-columns: minmax(0,1fr); }
+}

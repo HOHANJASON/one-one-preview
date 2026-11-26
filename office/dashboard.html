@@ -1,0 +1,49 @@
+<!doctype html><html lang="zh-Hant" data-demo-role="office" data-protected="true" data-login-page="./"><head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><title>1-1 案件後台｜營運總覽</title>
+    <meta name="robots" content="noindex"><link rel="stylesheet" href="./office.css"><link rel="stylesheet" href="../demo-auth.css"><link rel="stylesheet" href="./demo-office.css"><script src="../demo-access.js" defer></script></head><body class="office-static"><div data-demo-content hidden>
+    <aside class="office-side">
+      <div class="office-brand"><b>1-1</b><span>案件後台</span></div>
+      <nav aria-label="後台作業"><a class="top-link" href="./dashboard.html" aria-current="page">營運總覽</a>
+        <details>
+      <summary>代理管理</summary>
+      <a href="./agents.html">代理層級</a><a href="./staff.html">子帳號管理</a>
+    </details><details>
+      <summary>用戶管理</summary>
+      <a href="./customers.html">一般用戶</a><a href="./credit.html">聯徵查詢</a><a href="./flags.html">黑名單資訊</a><a href="./banks.html">銀行帳號審核</a>
+    </details><details>
+      <summary>風控管理</summary>
+      <a href="./review.html">放款分配與審核</a><a href="./review-log.html">審核紀錄查驗</a><a href="./review-assignments.html">分配紀錄查驗</a><a href="./cases.html">統整審核清單</a><a href="./risk-performance.html">業績統計</a>
+    </details><details>
+      <summary>代收／付金流管理</summary>
+      <a href="./channels.html">金流通道</a><a href="./channel-groups.html">金流群組</a>
+    </details><details>
+      <summary>放款管理</summary>
+      <a href="./loan-queue.html">待放款申請</a><a href="./loans.html">放款紀錄</a>
+    </details><details>
+      <summary>到期管理</summary>
+      <a href="./due-queue.html">到期訂單分配</a><a href="./due-assignments.html">到期訂單分配紀錄</a><a href="./payments.html">還款紀錄</a><a href="./due-performance.html">業績統計</a><a href="./extensions.html">展延管理</a><a href="./settlements.html">結清管理</a>
+    </details><details>
+      <summary>營運管理</summary>
+      <a href="./plans.html">方案管理</a><a href="./announcements.html">最新消息</a>
+    </details><details>
+      <summary>統計管理</summary>
+      <a href="./loan-report.html">放款統計</a><a href="./payment-report.html">還款統計</a><a href="./overdue-report.html">逾期統計</a><a href="./profit-report.html">盈虧彙總統計</a>
+    </details><details>
+      <summary>後台管理</summary>
+      <a href="./audit.html">操作紀錄</a>
+    </details><a class="top-link" href="./security.html">登入／安全設定</a>
+      </nav>
+    </aside>
+    <div class="office-frame"><header class="office-top"><span>營運工作區</span>
+      <div><span>1 · 管理員</span>
+        <button type="button" data-demo-logout>登出</button></div></header>
+    <main><div class="page-head"><h1>營運總覽</h1><span class="environment">公開展示</span></div><p class="demo-note">以下為虛構資料，供介面參考。</p><p id="demo-write-status" role="status"></p><div class="office-announcement">
+    <div class="slide-links"><a href="#notice-1" aria-label="顯示公告 1">1</a><a href="#notice-2" aria-label="顯示公告 2">2</a></div>
+    <div class="slide-track"><article id="notice-1"><span>營運公告</span>
+    <h2>審核與還款</h2><p>全站使用虛構資料，供畫面與流程參考。</p></article><article id="notice-2"><span>營運公告</span>
+    <h2>案件後台展示</h2><p>可從左側查看審核、放款、還款與統計樣式。</p></article></div>
+  </div>
+  
+  <div class="office-metrics"><article><span>累計註冊用戶</span><strong>2</strong></article><article><span>已驗證測試手機</span><strong>2</strong></article><article><span>區間新註冊</span><strong>2</strong></article><article><span>區間新增案件</span><strong>3</strong></article><article><span>區間示範放款</span><strong>NT$ 100,000</strong></article><article><span>首借用戶／金額</span><strong>1 · NT$ 100,000</strong></article><article><span>續借用戶／金額</span><strong>0 · NT$ 0</strong></article></div>
+  <section class="office-panel"><h2>數據趨勢</h2><div class="trend-grid"><div><time>11-23</time><div class="trend-bars"><meter class="customers" min="0" max="1" value="1" aria-label="customers 1"></meter><meter class="cases" min="0" max="1" value="1" aria-label="cases 1"></meter><meter class="loans" min="0" max="1" value="0" aria-label="loans 0"></meter><meter class="payments" min="0" max="1" value="0" aria-label="payments 0"></meter></div></div><div><time>11-24</time><div class="trend-bars"><meter class="customers" min="0" max="1" value="0" aria-label="customers 0"></meter><meter class="cases" min="0" max="1" value="1" aria-label="cases 1"></meter><meter class="loans" min="0" max="1" value="1" aria-label="loans 1"></meter><meter class="payments" min="0" max="1" value="0" aria-label="payments 0"></meter></div></div><div><time>11-25</time><div class="trend-bars"><meter class="customers" min="0" max="1" value="1" aria-label="customers 1"></meter><meter class="cases" min="0" max="1" value="0" aria-label="cases 0"></meter><meter class="loans" min="0" max="1" value="0" aria-label="loans 0"></meter><meter class="payments" min="0" max="1" value="1" aria-label="payments 1"></meter></div></div><div><time>11-26</time><div class="trend-bars"><meter class="customers" min="0" max="1" value="0" aria-label="customers 0"></meter><meter class="cases" min="0" max="1" value="1" aria-label="cases 1"></meter><meter class="loans" min="0" max="1" value="0" aria-label="loans 0"></meter><meter class="payments" min="0" max="1" value="0" aria-label="payments 0"></meter></div></div></div><p class="trend-legend">註冊　／　申請　／　放款　／　還款</p></section></main></div>
+    </div><noscript>請啟用 JavaScript 以使用後台展示。</noscript></body></html>

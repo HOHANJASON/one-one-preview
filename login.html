@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-Hant" data-demo-role="customer" data-dashboard-page="./member.html" data-login-page="./login.html">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>1-1｜登入展示</title>
+  <link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./demo-auth.css">
+  <script src="./demo-access.js" defer></script>
+</head>
+<body class="customer-auth">
+  <main class="demo-auth-window">
+    <header>
+      <a class="client-close" href="./" aria-label="返回首頁">×</a>
+      <strong class="client-mark">1-1</strong>
+      <h1>登入 1-1 會員中心</h1>
+      <p>比較三種方案 · 線上送件 · 追蹤案件</p>
+      <img src="./assets/finance-benefits.webp" alt="">
+    </header>
+    <section>
+      <h2>帳號登入</h2>
+      <p class="demo-note">展示帳密 1／1。請勿輸入正式帳密。</p>
+      <form data-demo-login>
+        <fieldset data-demo-fields disabled>
+        <label>帳號<input name="username" autocomplete="off" required></label>
+        <label for="client-password">密碼</label>
+        <div class="demo-password"><input id="client-password" name="password" type="password" autocomplete="off" required>
+          <button class="demo-secondary" type="button" data-toggle-password aria-controls="client-password" aria-pressed="false">顯示</button></div>
+        <p id="demo-status" role="status"></p>
+        <button class="button demo-submit">登入</button>
+        </fieldset>
+      </form>
+      <a class="demo-back" href="./">返回宣傳頁</a>
+    </section>
+  </main>
+</body>
+</html>

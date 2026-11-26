@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-Hant" data-demo-role="office" data-dashboard-page="./dashboard.html" data-login-page="./">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>1-1｜後台登入展示</title>
+  <link rel="stylesheet" href="./office.css"><link rel="stylesheet" href="../demo-auth.css"><link rel="stylesheet" href="./demo-office.css">
+  <script src="../demo-access.js" defer></script>
+</head>
+<body class="office-login-screen">
+  <main class="office-login-card">
+    <header><h1>案件後台</h1><small>展示</small></header>
+    <p class="demo-note">展示帳密 1／1。請勿輸入正式帳密。</p>
+    <form data-demo-login>
+      <fieldset data-demo-fields disabled>
+        <label>帳號<input name="username" autocomplete="off" required></label>
+        <label for="office-demo-password">密碼</label>
+        <div class="demo-password"><input id="office-demo-password" name="password" type="password" autocomplete="off" required>
+          <button class="demo-secondary" type="button" data-toggle-password aria-controls="office-demo-password" aria-pressed="false">顯示</button></div>
+        <div class="demo-puzzle-wrap">
+          <div class="puzzle-heading"><label for="office-demo-slider">把拼圖片移到框線</label><button class="demo-reset" type="button" data-demo-reset>換一張</button></div>
+          <div class="demo-puzzle" data-demo-puzzle aria-hidden="true"><span></span><i></i></div>
+          <input id="office-demo-slider" type="range" min="0" max="100" value="0" data-demo-slider>
+        </div>
+        <p id="demo-status" role="status"></p>
+        <button class="demo-submit">登入</button>
+      </fieldset>
+    </form>
+    <a class="demo-back" href="../">返回宣傳頁</a>
+  </main>
+</body>
+</html>
