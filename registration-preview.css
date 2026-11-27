@@ -1,0 +1,6 @@
+.demo-form-fields { min-width: 0; margin: 0; padding: 0; border: 0; }
+.demo-form-fields input[readonly] { background: #f7faff; }
+.auth-content .demo-fill { width: auto; margin: .4rem 0; }
+.demo-form-fields .auth-submit { width: 100%; }
+.demo-form-fields > label { display: block; margin: .75rem 0 .3rem; font-weight: 700; }
+.demo-form-fields #registered-next,.auth-content #result { color: #315478; }

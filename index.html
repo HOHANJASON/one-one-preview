@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="1-1 貸款方案與申請流程的展示版。">
-  <title>1-1｜貸款方案展示</title>
+  <meta name="description" content="了解 1-1 貸款方案、申請流程與常見問題。">
+  <title>1-1｜貸款方案與線上申請</title>
   <link rel="stylesheet" href="./style.css">
   <script src="./motion.js" defer></script>
 </head>
@@ -24,11 +24,12 @@
       <div class="hero-copy">
         <p class="overline">小額週轉　／　負債整合　／　信用貸款</p>
         <h1 id="hero-title">從資金需求開始，<br>找到合適的方向。</h1>
-        <p class="lede">三種方案一次看懂。先比較，再預覽怎麼申請。</p>
+        <p class="lede">比較三種貸款方案，從需求與每月負擔開始。</p>
         <div class="actions">
           <a class="button" href="#plans">比較方案</a>
-          <a class="button outline" href="#flow" data-preview>看申請畫面</a>
+          <a class="button outline" href="#flow" data-preview>查看申請畫面</a>
         </div>
+        <a class="original-link" href="./original/">查看原版宣傳頁</a>
       </div>
       <div class="hero-visual">
         <img src="./assets/finance-hero.webp" alt="兩人在家中一起核對預算" fetchpriority="high">
@@ -43,15 +44,30 @@
       <div class="plans">
         <article class="plan" data-reveal>
           <img src="./assets/finance-cash.webp" alt="" loading="lazy">
-          <div><h3>小額週轉</h3><p>臨時支出、短期收支缺口。</p><ul><li>先估算資金缺口</li><li>確認下一次可還款時間</li></ul><a href="#flow" data-preview="小額週轉">預覽這個方案</a></div>
+          <div><h3>小額週轉</h3><p>臨時支出、短期收支缺口。</p><ul><li>先估算資金缺口</li><li>確認下一次可還款時間</li></ul>
+            <details><summary>看方案細節</summary><dl class="plan-facts">
+              <div><dt>使用情境</dt><dd>臨時維修、搬遷和短期生活開支。</dd></div>
+              <div><dt>準備資料</dt><dd>預估需要的金額、用途及可還款時間。</dd></div>
+              <div><dt>評估重點</dt><dd>在下一筆收入到帳前，先確認生活費是否足夠。</dd></div>
+            </dl></details><a href="#flow" data-preview="小額週轉">預覽這個方案</a></div>
         </article>
         <article class="plan" data-reveal>
           <img src="./assets/finance-consolidation.webp" alt="" loading="lazy">
-          <div><h3>負債整合</h3><p>多筆借款，集中比較月付與費用。</p><ul><li>彙整各筆欠款與繳款日</li><li>比較整合前後總費用</li></ul><a href="#flow" data-preview="負債整合">預覽這個方案</a></div>
+          <div><h3>負債整合</h3><p>多筆借款，集中比較月付與費用。</p><ul><li>彙整各筆欠款與繳款日</li><li>比較整合前後總費用</li></ul>
+            <details><summary>看方案細節</summary><dl class="plan-facts">
+              <div><dt>使用情境</dt><dd>同時繳付多筆卡費或個別借款。</dd></div>
+              <div><dt>準備資料</dt><dd>各筆餘額、月付、剩餘期數和提前清償條件。</dd></div>
+              <div><dt>評估重點</dt><dd>比較整合前後的總還款額與還款期限。</dd></div>
+            </dl></details><a href="#flow" data-preview="負債整合">預覽這個方案</a></div>
         </article>
         <article class="plan" data-reveal>
           <img src="./assets/finance-credit.webp" alt="" loading="lazy">
-          <div><h3>信用貸款</h3><p>進修、居家修繕等已規劃支出。</p><ul><li>備妥收入與固定支出資訊</li><li>比較額度、期數與月付金</li></ul><a href="#flow" data-preview="信用貸款">預覽這個方案</a></div>
+          <div><h3>信用貸款</h3><p>進修、居家修繕等已規劃支出。</p><ul><li>備妥收入與固定支出資訊</li><li>比較額度、期數與月付金</li></ul>
+            <details><summary>看方案細節</summary><dl class="plan-facts">
+              <div><dt>使用情境</dt><dd>有明確計畫與金額的個人支出。</dd></div>
+              <div><dt>準備資料</dt><dd>收入、固定支出及現有負債的基本資訊。</dd></div>
+              <div><dt>評估重點</dt><dd>比較每月還款、手續費及提早還款的條件。</dd></div>
+            </dl></details><a href="#flow" data-preview="信用貸款">預覽這個方案</a></div>
         </article>
       </div>
     </section>
@@ -92,7 +108,7 @@
           <img src="./assets/finance-case.webp" alt="" loading="lazy">
           <div class="example-big">
             <h2 id="example-title">負債整合案例</h2>
-            <p class="sample-label">示意試算</p>
+            <p class="sample-label">假設月付試算</p>
             <div class="metric"><span>月付約少</span><strong aria-hidden="true"><span id="percent">48</span><small>%</small></strong><span class="sr-only">48%</span></div>
           </div>
         </div>
@@ -104,7 +120,7 @@
         </div>
       </div>
       <article class="second-example" data-reveal>
-        <div><h3>另一組月付比較</h3><p>示意試算 · 月付減少約 <strong>54%</strong></p></div>
+        <div><h3>另一組月付比較</h3><p>假設月付試算 · 減少約 <strong>54%</strong></p></div>
         <dl><div><dt>整合前</dt><dd>NT$ 39,000</dd></div><div><dt>整合後</dt><dd>NT$ 18,000</dd></div><div><dt>每月差額</dt><dd>NT$ 21,000</dd></div></dl>
       </article>
     </section>
@@ -124,9 +140,9 @@
       <header class="fold-head"><h2 id="faq-title">常見問題</h2><button type="button" data-expand="faq" hidden>展開全部</button></header>
       <details><summary>申請前需要準備哪些資料？</summary><p>先確認申請用途、金額與聯絡方式。實際證件、收入證明或帳戶資料，以正式流程說明為準。</p></details>
       <details><summary>審核要等多久？</summary><p>依資料完整度及承辦方查驗進度而定。正式申請可用案件編號查詢進度。</p></details>
-      <details><summary>額度與利率怎麼決定？</summary><p>通常會考量收入、信用紀錄、既有債務和還款能力。展示頁未提供正式核准條件。</p></details>
+      <details><summary>額度與利率怎麼決定？</summary><p>通常會考量收入、信用紀錄、既有債務和還款能力。實際核准條件依承辦機構回覆。</p></details>
       <details><summary>提早清償可能有費用嗎？</summary><p>請查閱方案及契約對提前還款的限制與費用。</p></details>
-      <details><summary>這個展示頁可以送件嗎？</summary><p>這裡可以試看畫面與流程。展示版不會送出申請，也不會收集個人資料。</p></details>
+      <details><summary>送件後到哪裡查進度？</summary><p>正式送件後，保留案件編號，再登入會員中心查詢審核與處理進度。</p></details>
     </section>
     <section class="frame section faq" id="news" aria-labelledby="news-title" data-reveal>
       <header class="fold-head"><h2 id="news-title">最新消息</h2><button type="button" data-expand="news" hidden>展開全部</button></header>
@@ -146,7 +162,7 @@
     </section>
   </main>
 
-  <footer class="frame footer"><strong>1-1</strong><span>客戶展示版 · 申請流程與金額僅供示意</span>
+  <footer class="frame footer"><strong>1-1</strong><span>貸款方案與線上申請</span>
     <nav aria-label="服務資訊"><a href="#privacy">隱私權政策</a><a href="#terms">服務條款</a><a href="#consumer">金融消費者保護</a><a href="#security-help">反詐騙宣導</a></nav>
     <a href="./office/">後台展示</a><a href="#top">回到頂端</a></footer>
   <a class="help-float" href="#contact">聯絡入口</a>
@@ -154,12 +170,26 @@
 
   <dialog id="preview" aria-labelledby="preview-title">
     <form method="dialog" class="dialog-close"><button aria-label="關閉預覽">×</button></form>
-    <p class="overline">操作預覽</p>
-    <h2 id="preview-title">申請流程</h2>
+    <p class="overline" id="preview-step">第 1／4 步</p>
+    <h2 id="preview-title" tabindex="-1">申請流程</h2>
     <div class="preview-content" aria-live="polite">
-      <section data-stage><h3>確認方案</h3><p>方案 <strong id="selected-plan">小額週轉</strong></p><p>示範金額 <strong>NT$ 100,000</strong></p></section>
-      <section data-stage hidden><h3>預覽申請資料</h3><p>示範資料已備妥。正式流程會在送件前讓你核對聯絡方式與附件。</p></section>
-      <section data-stage hidden><h3>查詢案件進度</h3><p>正式送件後，可在會員中心查到案件編號與審核更新。</p></section>
+      <section data-stage><h3>確認方案與金額</h3>
+        <label>申請方案<select id="selected-plan"><option>小額週轉</option><option>負債整合</option><option>信用貸款</option></select></label>
+        <label>需求金額（示範）<select id="preview-amount"><option value="100000">NT$ 100,000</option><option value="60000">NT$ 60,000</option><option value="200000">NT$ 200,000</option></select></label>
+      </section>
+      <section data-stage hidden><h3>確認基本資料與附件</h3>
+        <dl class="preview-facts"><div><dt>聯絡人</dt><dd>示範申請人</dd></div><div><dt>手機號碼</dt><dd>0900001234</dd></div></dl>
+        <ul class="preview-documents"><li><strong>身分證正面</strong><span>示意附件</span></li><li><strong>身分證反面</strong><span>示意附件</span></li><li><strong>本人照片</strong><span>示意附件</span></li></ul>
+        <p class="demo-note">此畫面不接受上傳檔案。</p>
+      </section>
+      <section data-stage hidden><h3>核對送件資料</h3>
+        <dl class="preview-facts"><div><dt>方案</dt><dd id="preview-summary-plan"></dd></div><div><dt>需求金額</dt><dd id="preview-summary-amount"></dd></div><div><dt>示意附件</dt><dd>3 項</dd></div></dl>
+        <p class="demo-note">下一步顯示示意回執，不會送出申請。</p>
+      </section>
+      <section data-stage hidden><h3>查詢案件進度</h3>
+        <dl class="preview-facts"><div><dt>展示案件</dt><dd>DEMO-001</dd></div><div><dt>目前狀態</dt><dd>審核中</dd></div></dl>
+        <a href="./login.html">登入看會員畫面</a>
+      </section>
     </div>
     <div class="dialog-controls"><button class="button outline" id="previous-stage" type="button">上一步</button><button class="button" id="next-stage" type="button">下一步</button></div>
   </dialog>

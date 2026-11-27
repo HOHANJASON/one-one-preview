@@ -1,26 +1,61 @@
-<!doctype html>
-<html lang="zh-Hant">
-<head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>1-1｜註冊流程展示</title>
-  <link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./demo-auth.css">
-</head>
-<body class="customer-auth">
-  <main class="demo-auth-window">
-    <header>
-      <a class="client-close" href="./" aria-label="返回首頁">×</a>
-      <strong class="client-mark">1-1</strong><h1>註冊流程展示</h1>
-      <p>先看註冊步驟，再用測試帳號體驗會員畫面。</p>
-      <img src="./assets/finance-benefits.webp" alt="">
-    </header>
-    <section>
-      <h2>建立帳號</h2>
-      <ol class="flow-list">
-        <li>設定帳號與密碼。</li><li>依正式流程完成手機驗證。</li><li>閱讀條款與個資說明，確認是否分享定位。</li>
-      </ol>
-      <p class="demo-note">本頁不收集資料，也不寄送驗證碼。</p>
-      <a class="button" href="./login.html">登入展示帳號</a>
-    </section>
-  </main>
-</body>
-</html>
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>1-1｜註冊</title><link rel="stylesheet" href="./original/style.css"><link rel="stylesheet" href="./registration-preview.css"><script src="./registration-preview.js" defer></script></head>
+  <body><div class="public-site auth-screen">
+      <div class="auth-background" aria-hidden="true"></div>
+      <main class="auth-window" id="apply" aria-labelledby="apply-title">
+        <aside class="auth-intro">
+          <a class="auth-close" href="./" aria-label="關閉並返回首頁">×</a>
+          <div class="auth-intro-copy"><span class="auth-wordmark">1-1</span>
+            <h1 id="apply-title">建立你的 1-1 帳號</h1>
+            <p>比較三種方案 · 線上送件 · 追蹤案件</p>
+          </div>
+          <img src="./assets/finance-benefits.webp" alt="">
+        </aside>
+        <section class="auth-content">
+          <nav class="auth-switch" aria-label="帳戶操作">
+            <a href="./login.html">帳號登入</a>
+            <a href="./register-preview.html" aria-current="page">立即註冊</a>
+          </nav>
+          
+  <form id="registration"><fieldset class="demo-form-fields" disabled>
+    
+    <button type="button" class="secondary demo-fill" id="fill-demo">填入示範資料</button><label for="register-account">帳號</label><input readonly id="register-account" name="username" required minlength="3" maxlength="24" pattern="[a-z0-9][a-z0-9_]{2,23}" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="3–24 位小寫英數或底線" title="帳號以英數開頭">
+    <div class="auth-fields">
+      <div><label for="register-name">姓名（測試）</label><input readonly id="register-name" name="displayName" maxlength="40" required placeholder="例如：測試申請人"></div>
+      <div><label for="register-id">身分證字號（測試）</label><input readonly id="register-id" name="testId" pattern="TEST[0-9]{6}" maxlength="10" autocapitalize="characters" required placeholder="TEST123456"></div>
+    </div>
+    <label for="register-phone">手機號碼（測試）</label><input readonly id="register-phone" name="phone" required inputmode="numeric" maxlength="10" pattern="090000[0-9]{4}" placeholder="0900001234">
+    <label for="register-code">手機驗證碼</label>
+    <div class="auth-code"><input readonly id="register-code" name="code" required inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" maxlength="6" placeholder="6 位數驗證碼">
+      <button class="secondary" type="button" id="send-register-code">取得測試碼</button></div>
+    <p id="register-code-status" class="auth-note" role="status" hidden></p>
+    <label for="register-secret">設定密碼</label>
+  <div class="password-field"><input readonly id="register-secret" name="password" type="password" required autocomplete="new-password"
+    minlength="8" maxlength="72" placeholder="至少 8 字元">
+    <button type="button" class="password-toggle" aria-controls="register-secret" aria-pressed="false">顯示</button>
+  </div>
+    <label for="register-confirm-secret">確認密碼</label>
+  <div class="password-field"><input readonly id="register-confirm-secret" name="passwordConfirmation" type="password" required autocomplete="new-password"
+    minlength="8" maxlength="72" placeholder="至少 8 字元">
+    <button type="button" class="password-toggle" aria-controls="register-confirm-secret" aria-pressed="false">顯示</button>
+  </div>
+    <div class="auth-consents">
+      <label class="auth-check"><input name="terms" type="checkbox" required><span>我同意<a href="./#terms" target="_blank" rel="noopener">服務條款</a>及<a href="./#privacy" target="_blank" rel="noopener">隱私權政策</a></span></label>
+      <label class="auth-check"><input name="adult" type="checkbox" required>我已年滿 18 歲，並確認填寫資料</label>
+    </div>
+    <details class="auth-position"><summary>分享註冊定位（選填）</summary><fieldset>
+      <legend>註冊定位（選填）</legend>
+      <p class="muted" id="position-hint">可預覽定位選填的樣式。展示資料為固定範例。</p>
+      <label class="auth-check"><input name="locationConsent" type="checkbox" aria-describedby="position-hint">我同意分享這次註冊的位置</label>
+      <button id="capture-position" type="button" class="secondary" disabled>使用示範定位</button>
+      <p id="position-state" role="status"></p>
+    </fieldset></details>
+    <button class="auth-submit">立即註冊</button>
+  </fieldset></form>
+  <p id="registered-next" hidden><a href="./login.html">使用展示帳密 1／1 登入</a></p>
+          <p id="result" role="status" aria-live="polite" hidden></p>
+          <a class="auth-support" href="./#contact">線上客服</a>
+        </section>
+      </main>
+    </div></body></html>

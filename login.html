@@ -2,7 +2,7 @@
 <html lang="zh-Hant" data-demo-role="customer" data-dashboard-page="./member.html" data-login-page="./login.html">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>1-1｜登入展示</title>
+  <title>1-1｜帳號登入</title>
   <link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./demo-auth.css">
   <script src="./demo-access.js" defer></script>
 </head>
@@ -16,8 +16,8 @@
       <img src="./assets/finance-benefits.webp" alt="">
     </header>
     <section>
-      <h2>帳號登入</h2>
-      <p class="demo-note">展示帳密 1／1。請勿輸入正式帳密。</p>
+      <nav class="demo-auth-tabs" aria-label="帳戶操作"><a href="./login.html" aria-current="page">帳號登入</a><a href="./register-preview.html">立即註冊</a></nav>
+      <p class="demo-note">測試帳號與密碼皆為 1。</p>
       <form data-demo-login>
         <fieldset data-demo-fields disabled>
         <label>帳號<input name="username" autocomplete="off" required></label>

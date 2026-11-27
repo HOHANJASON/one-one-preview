@@ -53,22 +53,34 @@ if (typeof dialog.showModal === 'function') {
   const stages = [...dialog.querySelectorAll('[data-stage]')];
   const prev = dialog.querySelector('#previous-stage');
   const next = dialog.querySelector('#next-stage');
+  const plan = dialog.querySelector('#selected-plan');
+  const amount = dialog.querySelector('#preview-amount');
+  const title = dialog.querySelector('#preview-title');
   let active = 0;
+  let openedBy;
 
   function showStage() {
     stages.forEach((section, index) => { section.hidden = index !== active; });
+    dialog.querySelector('#preview-step').textContent = `第 ${active + 1}／${stages.length} 步`;
+    dialog.querySelector('#preview-summary-plan').textContent = plan.value;
+    dialog.querySelector('#preview-summary-amount').textContent = amount.selectedOptions[0].textContent;
     prev.disabled = active === 0;
     next.textContent = active === stages.length - 1 ? '完成預覽' : '下一步';
+    dialog.scrollTop = 0;
   }
 
   document.querySelectorAll('[data-preview]').forEach(link => link.addEventListener('click', event => {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
-    dialog.querySelector('#selected-plan').textContent = link.dataset.preview || '小額週轉';
+    openedBy = link;
+    plan.value = link.dataset.preview || '小額週轉';
+    amount.value = '100000';
     active = 0;
     showStage();
     dialog.showModal();
+    title.focus({ preventScroll: true });
   }));
+  dialog.addEventListener('close', () => openedBy?.focus({ preventScroll: true }));
   prev.addEventListener('click', () => { active--; showStage(); });
   next.addEventListener('click', () => {
     if (active === stages.length - 1) dialog.close();
