@@ -95,6 +95,35 @@ dialog::backdrop { background: #101f35a3; }
 .preview-content { margin-block: 1rem; border-top: 1px solid var(--line); padding-top: .8rem; min-height: 8rem; }
 .preview-content p { margin: .55rem 0; }
 .dialog-controls { display: flex; justify-content: space-between; }
+.account-links { display: flex; align-items: center; gap: .65rem; white-space: nowrap; }
+.account-links a:first-child { font-weight: 700; }
+.plan ul { color: var(--muted); margin: 0 0 .85rem; padding-inline-start: 1.15rem; }
+.reminder,.contact,.second-example { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .7rem 1.1rem; border-radius: .7rem; padding: clamp(1rem,3vw,1.5rem); }
+.reminder { background: #fbf2df; border: 1px solid #ebd7ad; color: #593f20; }
+.reminder a { color: #593f20; font-weight: 750; }
+.reminder h2,.contact h2 { font-size: clamp(1.25rem,3vw,1.65rem); }
+.reminder p,.contact p,.second-example p { margin: .4rem 0 0; }
+.benefit-grid,.guide-grid { display: grid; gap: .85rem; }
+.benefit-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
+.guide-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+.benefit-grid article,.guide-grid article { background: #fff; border: 1px solid var(--line); border-radius: .65rem; padding: .95rem; }
+.benefit-grid article { border-inline-start: 3px solid #487cae; }
+.benefit-grid p,.guide-grid p { color: var(--muted); margin: .45rem 0 0; }
+.guide-note { margin: .8rem 0 0; padding: .75rem 1rem; border-radius: .5rem; color: #25496e; background: #eaf2fa; }
+.second-example { margin-top: .95rem; border: 1px solid var(--line); background: #fff; }
+.second-example strong { color: #174f88; font-size: 1.48rem; }
+.second-example dl { display: flex; flex-wrap: wrap; gap: .35rem 1.1rem; margin: 0; }
+.second-example dt { color: var(--muted); }
+.second-example dd { margin: 0; font-weight: 750; }
+.fold-head { display: flex; justify-content: space-between; align-items: baseline; gap: .65rem; }
+.fold-head button { padding: .24rem .4rem; color: var(--blue); background: transparent; text-decoration: underline; border: 0; cursor: pointer; white-space: nowrap; }
+.contact { background: #edf4fb; border: 1px solid var(--line); }
+.service-info { margin-block-end: 1.4rem; }
+.footer { row-gap: .75rem; }
+.footer nav { width: 100%; display: flex; flex-wrap: wrap; gap: .45rem 1rem; }
+.footer nav a,.footer > a { margin-left: 0; }
+.help-float { position: fixed; z-index: 1; right: 1rem; bottom: 1rem; border: 1px solid #234f74; border-radius: .45rem; background: #fff; color: #234f74; padding: .4rem .6rem; text-decoration: none; font-weight: 700; }
+.mobile-nav { display: none; }
 
 @media (prefers-reduced-motion: no-preference) {
   html { scroll-behavior: smooth; }
@@ -113,9 +142,15 @@ dialog::backdrop { background: #101f35a3; }
 }
 @media (max-width: 740px) {
   .top-inner { flex-wrap: wrap; padding-block: .6rem; }
-  .top nav { order: 1; width: 100%; }
+  .top nav { order: 1; width: 100%; gap: .45rem .85rem; flex-wrap: wrap; }
   .hero,.plans,.example,.flow-panel { grid-template-columns: minmax(0,1fr); }
   .hero-visual { min-height: clamp(13rem,65vw,21rem); }
   .example-visual { min-height: 13rem; }
   .flow-panel img { max-height: 12rem; }
+  .benefit-grid,.guide-grid { grid-template-columns: minmax(0,1fr); }
+  body:has(.mobile-nav) { padding-bottom: calc(3.3rem + env(safe-area-inset-bottom)); }
+  .mobile-nav { display: grid; position: fixed; z-index: 2; inset: auto 0 0; grid-template-columns: repeat(4,minmax(0,1fr));
+    padding: .52rem .5rem calc(.52rem + env(safe-area-inset-bottom)); background: #fff; border-top: 1px solid var(--line); }
+  .mobile-nav a { text-align: center; font-weight: 750; text-decoration: none; }
+  .help-float { bottom: calc(3.45rem + env(safe-area-inset-bottom)); font-size: .85rem; right: .55rem; }
 }

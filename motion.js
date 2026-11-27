@@ -25,6 +25,29 @@ if ('IntersectionObserver' in window && !reducedMotion.matches) {
   document.querySelectorAll('[data-reveal]').forEach(section => observer.observe(section));
 }
 
+document.querySelectorAll('[data-expand]').forEach(button => {
+  const group = document.getElementById(button.dataset.expand);
+  const items = [...group.querySelectorAll('details')];
+  if (!items.length) return;
+  const updateLabel = () => {
+    button.textContent = items.every(item => item.open) ? '收合全部' : '展開全部';
+  };
+  button.hidden = false;
+  button.addEventListener('click', () => {
+    const shouldOpen = !items.every(item => item.open);
+    items.forEach(item => { item.open = shouldOpen; });
+    updateLabel();
+  });
+  items.forEach(item => item.addEventListener('toggle', updateLabel));
+});
+
+function showLinkedDetails() {
+  const item = document.getElementById(location.hash.slice(1));
+  if (item?.tagName === 'DETAILS') item.open = true;
+}
+window.addEventListener('hashchange', showLinkedDetails);
+showLinkedDetails();
+
 const dialog = document.querySelector('#preview');
 if (typeof dialog.showModal === 'function') {
   const stages = [...dialog.querySelectorAll('[data-stage]')];

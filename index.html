@@ -13,9 +13,9 @@
     <div class="frame top-inner">
       <a class="brand" href="#top"><strong>1-1</strong><span>貸款方案</span></a>
       <nav aria-label="主要導覽">
-        <a href="#plans">方案</a><a href="#example">月付試算</a><a href="#flow">申請流程</a>
+        <a href="#plans">方案</a><a href="#example">月付試算</a><a href="#flow">申請流程</a><a href="#news">消息</a>
       </nav>
-      <a class="button small" href="./login.html">登入展示</a>
+      <div class="account-links"><a href="./login.html">登入</a><a class="button small" href="./register-preview.html">註冊</a></div>
     </div>
   </header>
 
@@ -43,16 +43,46 @@
       <div class="plans">
         <article class="plan" data-reveal>
           <img src="./assets/finance-cash.webp" alt="" loading="lazy">
-          <div><h3>小額週轉</h3><p>臨時支出、短期收支缺口。</p><a href="#flow" data-preview="小額週轉">預覽這個方案</a></div>
+          <div><h3>小額週轉</h3><p>臨時支出、短期收支缺口。</p><ul><li>先估算資金缺口</li><li>確認下一次可還款時間</li></ul><a href="#flow" data-preview="小額週轉">預覽這個方案</a></div>
         </article>
         <article class="plan" data-reveal>
           <img src="./assets/finance-consolidation.webp" alt="" loading="lazy">
-          <div><h3>負債整合</h3><p>多筆借款，集中比較月付與費用。</p><a href="#flow" data-preview="負債整合">預覽這個方案</a></div>
+          <div><h3>負債整合</h3><p>多筆借款，集中比較月付與費用。</p><ul><li>彙整各筆欠款與繳款日</li><li>比較整合前後總費用</li></ul><a href="#flow" data-preview="負債整合">預覽這個方案</a></div>
         </article>
         <article class="plan" data-reveal>
           <img src="./assets/finance-credit.webp" alt="" loading="lazy">
-          <div><h3>信用貸款</h3><p>進修、居家修繕等已規劃支出。</p><a href="#flow" data-preview="信用貸款">預覽這個方案</a></div>
+          <div><h3>信用貸款</h3><p>進修、居家修繕等已規劃支出。</p><ul><li>備妥收入與固定支出資訊</li><li>比較額度、期數與月付金</li></ul><a href="#flow" data-preview="信用貸款">預覽這個方案</a></div>
         </article>
+      </div>
+    </section>
+
+    <aside class="frame reminder" id="fraud" aria-labelledby="fraud-title">
+      <div><h2 id="fraud-title">防詐提醒</h2><p>收到先匯款、索取密碼或驗證碼的訊息，請停下來查證。</p></div>
+      <a href="#security-help">看防詐說明</a>
+    </aside>
+
+    <section class="frame section" id="flow" aria-labelledby="flow-title">
+      <header class="section-title" data-reveal><h2 id="flow-title">申請流程</h2></header>
+      <div class="flow-panel" data-reveal>
+        <img src="./assets/finance-benefits.webp" alt="" loading="lazy">
+        <div>
+          <ol class="flow-list">
+            <li><strong>填寫資料</strong><span>選方案、填金額與聯絡資料</span></li>
+            <li><strong>確認文件</strong><span>預覽應備文件與附件</span></li>
+            <li><strong>送出審核</strong><span>保留案件編號，查詢進度</span></li>
+            <li><strong>確認方案</strong><span>了解回覆內容與適用條件</span></li>
+          </ol>
+          <a class="button" href="#faq" data-preview>試看申請畫面</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="frame section" id="benefits" aria-labelledby="benefits-title">
+      <header class="section-title" data-reveal><h2 id="benefits-title">申請 1-1 能做什麼</h2></header>
+      <div class="benefit-grid" data-reveal>
+        <article><h3>線上送件</h3><p>先預覽再確認，送件後可查進度。</p></article>
+        <article><h3>資料用途清楚</h3><p>送件前先看資料用途，定位可選填。</p></article>
+        <article><h3>多種方案可比較</h3><p>依資金用途和每月還款能力挑選。</p></article>
       </div>
     </section>
 
@@ -73,31 +103,54 @@
           <details><summary>試算前提</summary><p>以兩組假設月付比較。實際金額因利率、期數及費用而異，月付較低也可能伴隨更長的還款期限。</p></details>
         </div>
       </div>
+      <article class="second-example" data-reveal>
+        <div><h3>另一組月付比較</h3><p>示意試算 · 月付減少約 <strong>54%</strong></p></div>
+        <dl><div><dt>整合前</dt><dd>NT$ 39,000</dd></div><div><dt>整合後</dt><dd>NT$ 18,000</dd></div><div><dt>每月差額</dt><dd>NT$ 21,000</dd></div></dl>
+      </article>
     </section>
 
-    <section class="frame section" id="flow" aria-labelledby="flow-title">
-      <header class="section-title" data-reveal><h2 id="flow-title">申請怎麼走</h2><p>先看流程，再決定要不要開始。</p></header>
-      <div class="flow-panel" data-reveal>
-        <img src="./assets/finance-benefits.webp" alt="" loading="lazy">
-        <div>
-          <ol class="flow-list">
-            <li><strong>選擇方案</strong><span>確認用途與金額</span></li>
-            <li><strong>預覽資料</strong><span>核對資料與附件</span></li>
-            <li><strong>查詢進度</strong><span>以案件編號查詢</span></li>
-          </ol>
-          <a class="button" href="#faq" data-preview>試看申請畫面</a>
-        </div>
+    <section class="frame section" id="guide" aria-labelledby="guide-title">
+      <header class="section-title" data-reveal><h2 id="guide-title">借款前的四個檢查</h2></header>
+      <div class="guide-grid" data-reveal>
+        <article><h3>先估算還款能力</h3><p>收入扣掉固定開銷，留出基本生活費。</p></article>
+        <article><h3>把錢用在需要的地方</h3><p>先列出用途，再決定實際要借多少。</p></article>
+        <article><h3>按時還款</h3><p>確認扣款日期、還款方式和帳戶餘額。</p></article>
+        <article><h3>多比較幾個方案</h3><p>一起看利率、期數、費用和總還款額。</p></article>
       </div>
+      <p class="guide-note">量力而為，先把每月還款納入生活預算。</p>
     </section>
 
     <section class="frame section faq" id="faq" aria-labelledby="faq-title" data-reveal>
-      <h2 id="faq-title">常見問題</h2>
+      <header class="fold-head"><h2 id="faq-title">常見問題</h2><button type="button" data-expand="faq" hidden>展開全部</button></header>
+      <details><summary>申請前需要準備哪些資料？</summary><p>先確認申請用途、金額與聯絡方式。實際證件、收入證明或帳戶資料，以正式流程說明為準。</p></details>
+      <details><summary>審核要等多久？</summary><p>依資料完整度及承辦方查驗進度而定。正式申請可用案件編號查詢進度。</p></details>
+      <details><summary>額度與利率怎麼決定？</summary><p>通常會考量收入、信用紀錄、既有債務和還款能力。展示頁未提供正式核准條件。</p></details>
+      <details><summary>提早清償可能有費用嗎？</summary><p>請查閱方案及契約對提前還款的限制與費用。</p></details>
       <details><summary>這個展示頁可以送件嗎？</summary><p>這裡可以試看畫面與流程。展示版不會送出申請，也不會收集個人資料。</p></details>
-      <details><summary>比較方案時要看什麼？</summary><p>一併看每月負擔、還款期數與總費用。</p></details>
+    </section>
+    <section class="frame section faq" id="news" aria-labelledby="news-title" data-reveal>
+      <header class="fold-head"><h2 id="news-title">最新消息</h2><button type="button" data-expand="news" hidden>展開全部</button></header>
+      <details><summary>防詐與帳戶安全提醒</summary><p>保留官方聯絡方式，避免交付帳密、驗證碼及個人金融資訊。</p><a href="#security-help">查看防詐說明</a></details>
+      <details><summary>歲末活動資訊</summary><p>活動期間、利率和適用條件待公告。</p></details>
+      <details><summary>線上送件流程展示</summary><p>現在可先試看選方案、核對資料和查詢進度的畫面。</p><a href="#flow">查看申請流程</a></details>
+      <details><summary>首次申請資訊</summary><p>首次申請的活動及贈禮目前尚未公布。</p></details>
+    </section>
+    <section class="frame section contact" id="contact" aria-labelledby="contact-title" data-reveal>
+      <div><h2 id="contact-title">聯絡我們</h2><p>正式客服管道待公告。申請問題可先看常見問題。</p></div><a class="button" href="#faq">查看申請問題</a>
+    </section>
+    <section class="frame section faq service-info" id="service" aria-label="服務說明">
+      <details id="privacy"><summary>隱私權政策</summary><p>這是展示頁，測試登入和操作預覽在瀏覽器內完成。請勿輸入正式個資或帳密。</p></details>
+      <details id="terms"><summary>服務條款</summary><p>本展示僅供確認畫面、流程及樣式，沒有實際申請、審核或撥款。</p></details>
+      <details id="consumer"><summary>金融消費者保護</summary><p>確認承辦機構與契約內容，並比較利率、總費用年百分率、期數及提前清償條件。</p></details>
+      <details id="security-help"><summary>反詐騙宣導</summary><p>遇到陌生人要求先付款才撥款、提供網銀密碼或交出簡訊驗證碼，先停止操作並依已確認的官方管道查證。</p></details>
     </section>
   </main>
 
-  <footer class="frame footer"><strong>1-1</strong><span>客戶展示版 · 申請流程與金額僅供示意</span><a href="./office/">後台展示</a><a href="#top">回到頂端</a></footer>
+  <footer class="frame footer"><strong>1-1</strong><span>客戶展示版 · 申請流程與金額僅供示意</span>
+    <nav aria-label="服務資訊"><a href="#privacy">隱私權政策</a><a href="#terms">服務條款</a><a href="#consumer">金融消費者保護</a><a href="#security-help">反詐騙宣導</a></nav>
+    <a href="./office/">後台展示</a><a href="#top">回到頂端</a></footer>
+  <a class="help-float" href="#contact">聯絡入口</a>
+  <nav class="mobile-nav" aria-label="手機快速導覽"><a href="#top">首頁</a><a href="#plans">方案</a><a href="./member.html">我的</a><a href="#news">消息</a></nav>
 
   <dialog id="preview" aria-labelledby="preview-title">
     <form method="dialog" class="dialog-close"><button aria-label="關閉預覽">×</button></form>
