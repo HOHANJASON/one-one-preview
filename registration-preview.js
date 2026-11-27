@@ -4,8 +4,6 @@ const status = document.querySelector('#result');
 const next = document.querySelector('#registered-next');
 const phone = form.elements.phone;
 const code = form.elements.code;
-const consent = form.elements.locationConsent;
-const capture = document.querySelector('#capture-position');
 
 fields.disabled = false;
 
@@ -30,14 +28,6 @@ document.querySelector('#send-register-code').addEventListener('click', () => {
   }
   code.value = '123456';
   info.textContent = '已填入測試碼 123456。';
-});
-
-consent.addEventListener('change', () => {
-  capture.disabled = !consent.checked;
-  document.querySelector('#position-state').textContent = '';
-});
-capture.addEventListener('click', () => {
-  document.querySelector('#position-state').textContent = '已套用示範定位：臺北市。';
 });
 
 document.querySelectorAll('.password-toggle').forEach(button => button.addEventListener('click', () => {
