@@ -45,6 +45,6 @@ form.addEventListener('submit', event => {
     return;
   }
   next.hidden = false;
-  message('已確認範例位置。請用測試帳密 1／1 登入。');
+  message('已完成註冊步驟。請用測試帳密 1／1 登入。');
   next.querySelector('a').focus();
 });
